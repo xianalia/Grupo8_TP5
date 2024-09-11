@@ -1,21 +1,21 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package grupo8_tp5;
 
-/**
- *
- * @author xiana
- */
+import grupo8_tp5.clases.Contacto;
+import grupo8_tp5.clases.Directorio;
+
+
 public class Grupo8_TP5 {
 
-    /**
-     * @param args the command line arguments
-     */
+    
     public static void main(String[] args) {
-        // TODO code application logic here
+        Contacto contacto = new Contacto(33757395, "Ximena", "Cuello", "San Luis", "Mitre 358");
+        
+        Directorio directorio = new Directorio();
+        
+        directorio.agregarContacto(2664560514L, contacto);
+        
+        directorio.buscarContacto(2664560514L);
     }
     
 }
