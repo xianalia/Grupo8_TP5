@@ -2,7 +2,7 @@
 package grupo8_tp5;
 
 
-public class Contactos {
+public class Contactos  {
       private String dni;
     private String nombre;
     private String apellido;

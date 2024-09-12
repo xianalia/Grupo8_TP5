@@ -215,19 +215,35 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="jtfDni">
+          <Events>
+            <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jtfDniFocusLost"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="jtfApellido">
+          <Events>
+            <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jtfApellidoFocusLost"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="jtfDireccion">
+          <Events>
+            <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jtfDireccionFocusLost"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="jtfCiudad">
+          <Events>
+            <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jtfCiudadFocusLost"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="jtfTelefono">
           <Events>
+            <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jtfTelefonoFocusLost"/>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jtfTelefonoActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="jtfNombre">
+          <Events>
+            <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jtfNombreFocusLost"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JSeparator" name="jSeparator1">
         </Component>

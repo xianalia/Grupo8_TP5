@@ -5,10 +5,12 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.Set;
+import javax.swing.Action;
 import javax.swing.JOptionPane;
 
 public class Formulario extends javax.swing.JFrame {
  private Directorio directorio;
+
    
     public Formulario() {
         directorio= new Directorio();
@@ -70,9 +72,44 @@ public class Formulario extends javax.swing.JFrame {
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jLabel7.setText("Telefono:");
 
+        jtfDni.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jtfDniFocusLost(evt);
+            }
+        });
+
+        jtfApellido.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jtfApellidoFocusLost(evt);
+            }
+        });
+
+        jtfDireccion.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jtfDireccionFocusLost(evt);
+            }
+        });
+
+        jtfCiudad.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jtfCiudadFocusLost(evt);
+            }
+        });
+
+        jtfTelefono.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jtfTelefonoFocusLost(evt);
+            }
+        });
         jtfTelefono.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jtfTelefonoActionPerformed(evt);
+            }
+        });
+
+        jtfNombre.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jtfNombreFocusLost(evt);
             }
         });
 
@@ -206,7 +243,12 @@ public class Formulario extends javax.swing.JFrame {
     }//GEN-LAST:event_jtfTelefonoActionPerformed
 
     private void jbBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBuscarActionPerformed
-        // TODO add your handling code here:
+jbBuscar.addActionListener(new ActionListener() {
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        buscarTelefonoApellido();
+    }
+});        
     }//GEN-LAST:event_jbBuscarActionPerformed
 
     private void jbNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbNuevoActionPerformed
@@ -218,8 +260,54 @@ jbNuevo.addActionListener(new ActionListener() {
     }
 });
     }//GEN-LAST:event_jbNuevoActionPerformed
+//solo numeros dni
+    private void jtfDniFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jtfDniFocusLost
+        String val="[0-9]*";
+        if(!jtfDni.getText().matches(val)){
+        JOptionPane.showMessageDialog(this,"debe ingresar solo numeros");
+        jtfDni.requestFocus();
+        }
+    }//GEN-LAST:event_jtfDniFocusLost
+// solo numeros telefono
+    private void jtfTelefonoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jtfTelefonoFocusLost
+        String val="[0-9]*";
+        if(!jtfTelefono.getText().matches(val)){
+        JOptionPane.showMessageDialog(this,"debe ingresar solo numeros");
+        jtfTelefono.requestFocus();
+        }
+    }//GEN-LAST:event_jtfTelefonoFocusLost
+
+    private void jtfNombreFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jtfNombreFocusLost
+    if(jtfNombre.getText().length()==0){
+        
+    JOptionPane.showMessageDialog(this, "este campo no puede estar vacio");
+        jtfNombre.requestFocus();
+
+}
+    }//GEN-LAST:event_jtfNombreFocusLost
+
+    private void jtfApellidoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jtfApellidoFocusLost
+    if(jtfApellido.getText().length()==0){
+        
+    JOptionPane.showMessageDialog(this, "este campo no puede estar vacio");
+        jtfApellido.requestFocus();    }//GEN-LAST:event_jtfApellidoFocusLost
+    }
     
-     
+    private void jtfDireccionFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jtfDireccionFocusLost
+    if(jtfDireccion.getText().length()==0){
+        
+    JOptionPane.showMessageDialog(this, "este campo no puede estar vacio");
+        jtfDireccion.requestFocus();    }//GEN-LAST:event_jtfDireccionFocusLost
+    }
+    
+    private void jtfCiudadFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jtfCiudadFocusLost
+    if(jtfCiudad.getText().length()==0){
+        
+    JOptionPane.showMessageDialog(this, "este campo no puede estar vacio");
+        jtfCiudad.requestFocus();    }//GEN-LAST:event_jtfCiudadFocusLost
+    }
+
+    
      
     private void limpiarCampos() {
         jtfDni.setText("");
