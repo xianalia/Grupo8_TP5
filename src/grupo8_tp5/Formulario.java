@@ -3,15 +3,20 @@ package grupo8_tp5;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.Set;
 import javax.swing.JOptionPane;
 
 public class Formulario extends javax.swing.JFrame {
  private Directorio directorio;
    
     public Formulario() {
+        directorio= new Directorio();
         initComponents();
         
     }
+    
+    
  
    
     @SuppressWarnings("unchecked")
@@ -209,7 +214,7 @@ jbNuevo.addActionListener(new ActionListener() {
     @Override
     public void actionPerformed(ActionEvent e) {
         agregarContacto();
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+   
     }
 });
     }//GEN-LAST:event_jbNuevoActionPerformed
@@ -226,6 +231,8 @@ jbNuevo.addActionListener(new ActionListener() {
     }
      
     private void agregarContacto() {
+        
+       try {
         String dni = jtfDni.getText();
         String nombre = jtfNombre.getText();
         String apellido = jtfApellido.getText();
@@ -237,8 +244,58 @@ jbNuevo.addActionListener(new ActionListener() {
         directorio.agregarContacto(telefono, contacto);
      JOptionPane.showMessageDialog( null,"Contacto agregado: " + contacto);
         limpiarCampos();
+        
+         } catch (NumberFormatException ex) {
+            JOptionPane.showMessageDialog(null,"Error: El contacto no ha sido agregado, revisa que todos los campos esten completos");
+        }
       }
-   
+    
+    private void buscarContacto() {
+        Long telefono = Long.parseLong(jtfTelefono.getText());
+        Contactos contacto = directorio.buscarContacto(telefono);
+
+        if (contacto != null) {
+            JOptionPane.showMessageDialog(null,"Contacto encontrado: " + contacto );
+        } else {
+              JOptionPane.showMessageDialog(null,"Contacto no encontrado");
+        }
+        limpiarCampos();
+    }
+    
+     private void buscarTelefonoApellido() {
+        String apellido = jtfApellido.getText();
+        Set<Long> telefonos = directorio.buscarTelefonoApellido(apellido);
+
+        if (!telefonos.isEmpty()) {
+           JOptionPane.showMessageDialog(null,"Teléfonos encontrados para el apellido " + apellido + ": " + telefonos );
+        } else {
+            JOptionPane.showMessageDialog(null,"No se encontraron teléfonos para el apellido " + apellido );
+        }
+        limpiarCampos();
+     }
+     
+     private void buscarContactosCiudad() {
+        String ciudad = jtfCiudad.getText();
+        ArrayList<Contactos> contactos = directorio.buscarContactosCiudad(ciudad);
+
+        if (!contactos.isEmpty()) {
+             JOptionPane.showMessageDialog(null,"Contactos encontrados en la ciudad " + ciudad );
+            for (Contactos c : contactos) {
+                 JOptionPane.showMessageDialog(null,c);
+            }
+        } else {
+             JOptionPane.showMessageDialog(null,"No se encontraron contactos en la ciudad " + ciudad + ".\n");
+        }
+        limpiarCampos();
+    }
+     
+      private void borrarContacto() {
+        Long telefono = Long.parseLong(jtfTelefono.getText());
+        directorio.borrarContacto(telefono);
+       JOptionPane.showMessageDialog(null,"Contacto con teléfono " + telefono + " ha sido eliminado.");
+        limpiarCampos();
+    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
