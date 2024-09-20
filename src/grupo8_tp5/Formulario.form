@@ -141,7 +141,6 @@
         <Component class="javax.swing.JTextField" name="jtfDni">
           <Events>
             <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jtfDniFocusLost"/>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jtfDniActionPerformed"/>
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -253,7 +252,7 @@
         <Component class="javax.swing.JLabel" name="bg">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/grupo8_tp5/clases/Tecnolog&#xed;a Azul Claro Minimalista Sombreado de Pantalla Imagen para Descarga Gratuita - Pngtree.jpeg"/>
+              <Image iconType="3" name="/grupo8_tp5/imagenes/imagenFondo.jpeg"/>
             </Property>
             <Property name="text" type="java.lang.String" value="jLabel8"/>
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">

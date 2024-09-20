@@ -38,7 +38,7 @@ private DefaultTableModel modelo = new DefaultTableModel();
         jTextField1 = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         jtContactosA = new javax.swing.JTable();
-        jLabel3 = new javax.swing.JLabel();
+        bg = new javax.swing.JLabel();
 
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -74,10 +74,10 @@ private DefaultTableModel modelo = new DefaultTableModel();
         ));
         jScrollPane1.setViewportView(jtContactosA);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 107, 547, 258));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 547, 258));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/grupo8_tp5/Tecnología Azul Claro Minimalista Sombreado de Pantalla Imagen para Descarga Gratuita - Pngtree.jpeg"))); // NOI18N
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -30, 620, 430));
+        bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/grupo8_tp5/imagenes/imagenFondo.jpeg"))); // NOI18N
+        getContentPane().add(bg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -30, 620, 430));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -88,9 +88,9 @@ private DefaultTableModel modelo = new DefaultTableModel();
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel bg;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTable jtContactosA;

@@ -85,11 +85,6 @@ public class Formulario extends javax.swing.JFrame {
                 jtfDniFocusLost(evt);
             }
         });
-        jtfDni.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jtfDniActionPerformed(evt);
-            }
-        });
         jPanel1.add(jtfDni, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 80, 252, -1));
 
         jtfApellido.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -150,7 +145,7 @@ public class Formulario extends javax.swing.JFrame {
         jbSalir.setText("Salir");
         jPanel1.add(jbSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(425, 395, -1, -1));
 
-        bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/grupo8_tp5/clases/Tecnología Azul Claro Minimalista Sombreado de Pantalla Imagen para Descarga Gratuita - Pngtree.jpeg"))); // NOI18N
+        bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/grupo8_tp5/imagenes/imagenFondo.jpeg"))); // NOI18N
         bg.setText("jLabel8");
         bg.setMaximumSize(new java.awt.Dimension(236, 236));
         bg.setMinimumSize(new java.awt.Dimension(236, 236));
@@ -230,12 +225,8 @@ jbNuevo.addActionListener(new ActionListener() {
         
     JOptionPane.showMessageDialog(this, "este campo no puede estar vacio");
         jtfCiudad.requestFocus();    }//GEN-LAST:event_jtfCiudadFocusLost
-
-    private void jtfDniActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfDniActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jtfDniActionPerformed
+    }    
     
-    }
     private void limpiarCampos() {
         jtfDni.setText("");
         jtfNombre.setText("");
