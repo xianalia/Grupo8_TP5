@@ -4,7 +4,6 @@
  */
 package grupo8_tp5;
 
-import java.util.Set;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
@@ -16,14 +15,12 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author Kevin
  */
-public class ViewBuscarPorApellido extends javax.swing.JInternalFrame {
+public class ViewBuscarPorTelefono1 extends javax.swing.JInternalFrame {
 private DefaultTableModel modelo = new DefaultTableModel();
     /**
      * Creates new form ViewBuscarPorApellido
      */
-    public ViewBuscarPorApellido() {
-         Directorio directorio = new Directorio();
-         
+    public ViewBuscarPorTelefono1() {
         initComponents();
         
     }
@@ -39,7 +36,7 @@ private DefaultTableModel modelo = new DefaultTableModel();
 
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jtfApellido = new javax.swing.JTextField();
+        jTextField1 = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         jtContactosA = new javax.swing.JTable();
         jbBorrarapellidoview = new javax.swing.JButton();
@@ -58,20 +55,20 @@ private DefaultTableModel modelo = new DefaultTableModel();
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(51, 51, 255));
-        jLabel2.setText("Busqueda por Apellido :");
+        jLabel2.setText("Busqueda por Telefono :");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 60, -1, 28));
 
-        jtfApellido.addActionListener(new java.awt.event.ActionListener() {
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jtfApellidoActionPerformed(evt);
+                jTextField1ActionPerformed(evt);
             }
         });
-        jtfApellido.addKeyListener(new java.awt.event.KeyAdapter() {
+        jTextField1.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
-                jtfApellidoKeyReleased(evt);
+                jTextField1KeyReleased(evt);
             }
         });
-        getContentPane().add(jtfApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 60, 282, 33));
+        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 60, 282, 33));
 
         jtContactosA.setBackground(new java.awt.Color(228, 243, 228));
         jtContactosA.setModel(new javax.swing.table.DefaultTableModel(
@@ -109,42 +106,41 @@ private DefaultTableModel modelo = new DefaultTableModel();
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jtfApellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfApellidoActionPerformed
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jtfApellidoActionPerformed
+    }//GEN-LAST:event_jTextField1ActionPerformed
 /*codigo del profe  v9"detodoSA" para generar la busqueda de productos desde la vista, hay que adaptarlo 
     para hacerlo con los contactos*/
     
-    private void jtfApellidoKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfApellidoKeyReleased
+    private void jTextField1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField1KeyReleased
        /* for ( producto prod: menu. listaProductos) {
     if prod.getDescripcion().startWith(jtnombre.getText())
     modelo.addRow(new object [] (
     prod.getCodigo(),
     prod.getDescripcion()...
     )}*/
-    }//GEN-LAST:event_jtfApellidoKeyReleased
+    }//GEN-LAST:event_jTextField1KeyReleased
 
     private void jbVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbVolverActionPerformed
         dispose();
     }//GEN-LAST:event_jbVolverActionPerformed
-  
-   
+ 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel bg;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JButton jbBorrarapellidoview;
     private javax.swing.JButton jbVolver;
     private javax.swing.JTable jtContactosA;
-    private javax.swing.JTextField jtfApellido;
     // End of variables declaration//GEN-END:variables
 
-    public ViewBuscarPorApellido(JLabel jLabel1, JLabel jLabel2, JScrollPane jScrollPane1, JTextField jTextField1, JTable jtContactosA) {
+    public ViewBuscarPorTelefono1(JLabel jLabel1, JLabel jLabel2, JScrollPane jScrollPane1, JTextField jTextField1, JTable jtContactosA) {
         this.jLabel1 = jLabel1;
         this.jLabel2 = jLabel2;
         this.jScrollPane1 = jScrollPane1;
-        this.jtfApellido = jTextField1;
+        this.jTextField1 = jTextField1;
         this.jtContactosA = jtContactosA;
     }
 
