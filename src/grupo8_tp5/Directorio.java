@@ -7,7 +7,7 @@ import java.util.TreeMap;
 import java.util.TreeSet;
 
 
-public class Directorio {
+public class Directorio  {
      private TreeMap<Long, Contactos> contactos;
      
       public Directorio() {

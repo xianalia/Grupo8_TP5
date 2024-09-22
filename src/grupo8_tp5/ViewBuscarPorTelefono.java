@@ -39,6 +39,8 @@ private DefaultTableModel modelo = new DefaultTableModel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jtContactosA = new javax.swing.JTable();
 
+        setClosable(true);
+
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setText("Contactos");
 
